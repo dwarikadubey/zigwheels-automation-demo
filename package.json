@@ -1,0 +1,23 @@
+{
+  "name": "zigwheels-automation",
+  "version": "1.0.0",
+  "type": "commonjs",
+  "scripts": {
+    "test": "cucumber-js tests/features --require-module ts-node/register --require tests/**/*.ts"
+  },
+  "devDependencies": {
+    "@cucumber/cucumber": "^10.9.0",
+    "@types/node": "^20.19.8",
+    "playwright": "^1.54.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  },
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
