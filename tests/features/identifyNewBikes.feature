@@ -1,8 +1,7 @@
 Feature: Identify New Bikes on ZigWheels
 
   Scenario: Display upcoming Honda bikes under 4 Lac
-    Given I am on the ZigWheels upcoming bikes page
-    When I filter bikes by manufacturer "Honda"
+    Given I am on the ZigWheels upcoming honda bikes page
     And I filter bikes with price less than 4 Lac
     Then I should see a list of upcoming Honda bikes with their name, price, and expected launch date
 
