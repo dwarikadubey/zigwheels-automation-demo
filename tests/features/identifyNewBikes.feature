@@ -15,6 +15,7 @@ Feature: Identify New Bikes on ZigWheels
     When I try to login with Google using invalid account details
     Then I should see an error message for invalid login
 
+  @frames
   Scenario: Handle windows and frames
     Given I am on a page with multiple windows or frames
     When I switch between windows and frames
@@ -41,7 +42,7 @@ Feature: Identify New Bikes on ZigWheels
     Then I should capture and report these performance metrics
 
   Scenario: Accessibility testing
-    Given I am on any page of the site
+    Given I am on the site for accessibility testing
     When I perform accessibility checks
     Then the site should be compatible with screen readers and keyboard navigation
 
