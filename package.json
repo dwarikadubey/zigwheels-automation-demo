@@ -3,12 +3,13 @@
   "version": "1.0.0",
   "type": "commonjs",
   "scripts": {
-    "test": "cucumber-js tests/features --require-module ts-node/register --require tests/**/*.ts"
+    "test": "cucumber-js tests/features --require-module ts-node/register --require tests/**/*.ts --format json:reports/cucumber_report.json"
   },
   "devDependencies": {
     "@cucumber/cucumber": "^10.9.0",
     "@playwright/test": "^1.54.1",
     "@types/node": "^20.19.8",
+    "cucumber-html-reporter": "^7.2.0",
     "playwright": "^1.54.1",
     "ts-node": "^10.9.2",
     "typescript": "^5.8.3"

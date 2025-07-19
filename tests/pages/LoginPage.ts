@@ -30,7 +30,7 @@ export class LoginPage {
             console.log('Popup URL:', popup.url());
             const email_input = popup.locator('#identifierId');
             await email_input.waitFor({ state: 'visible', timeout: 10000 });
-            await email_input.focus();
+            // await email_input.focus();
             await email_input.fill('12##$$%%');
             await popup.waitForTimeout(500);
             await popup.locator('span.VfPpkd-vQzf8d:has-text("Next")').click();
