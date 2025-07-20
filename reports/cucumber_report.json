@@ -4,6 +4,138 @@
     "elements": [
       {
         "description": "",
+        "id": "identify-new-bikes-on-zigwheels;display-upcoming-honda-bikes-under-4-lac",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Display upcoming Honda bikes under 4 Lac",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 565844300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I am on the ZigWheels upcoming honda bikes page",
+            "match": {
+              "location": "tests\\step-definitions\\upcomingBikes.steps.ts:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6154102899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 5,
+            "name": "I filter bikes with price less than 4 Lac",
+            "match": {
+              "location": "tests\\step-definitions\\upcomingBikes.steps.ts:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 634299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "I should see a list of upcoming Honda bikes with their name, price, and expected launch date",
+            "match": {
+              "location": "tests\\step-definitions\\upcomingBikes.steps.ts:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2564512000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 507172899
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "identify-new-bikes-on-zigwheels;extract-used-car-models-in-chennai",
+        "keyword": "Scenario",
+        "line": 8,
+        "name": "Extract used car models in Chennai",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 576256600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 9,
+            "name": "I am on the ZigWheels used cars page for Chennai",
+            "match": {
+              "location": "tests\\step-definitions\\usedCars.steps.ts:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7632979899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 10,
+            "name": "I view the list of popular used car models",
+            "match": {
+              "location": "tests\\step-definitions\\usedCars.steps.ts:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2193115599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 11,
+            "name": "I should see all popular models displayed in a list",
+            "match": {
+              "location": "tests\\step-definitions\\usedCars.steps.ts:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1274199
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 541600399
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
         "id": "identify-new-bikes-on-zigwheels;capture-error-message-on-invalid-google-login",
         "keyword": "Scenario",
         "line": 13,
@@ -14,7 +146,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 961936699
+              "duration": 535966599
             }
           },
           {
@@ -27,7 +159,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 889233900
+              "duration": 884444999
             }
           },
           {
@@ -40,7 +172,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 14120407200
+              "duration": 12168734800
             }
           },
           {
@@ -53,7 +185,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 20047589100
+              "duration": 20029855700
             }
           },
           {
@@ -61,7 +193,338 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 734989200
+              "duration": 451783000
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "identify-new-bikes-on-zigwheels;handle-windows-and-frames",
+        "keyword": "Scenario",
+        "line": 18,
+        "name": "Handle windows and frames",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 559486799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 19,
+            "name": "I am on a page with multiple windows or frames",
+            "match": {
+              "location": "tests\\step-definitions\\windowsFrames.steps.ts:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2322291899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 20,
+            "name": "I switch between windows and frames",
+            "match": {
+              "location": "tests\\step-definitions\\windowsFrames.steps.ts:23"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5658647099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 21,
+            "name": "I should be able to interact with elements in each window or frame",
+            "match": {
+              "location": "tests\\step-definitions\\windowsFrames.steps.ts:40"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 208381399
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 943313200
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "identify-new-bikes-on-zigwheels;fill-simple-form-and-capture-warning-message",
+        "keyword": "Scenario",
+        "line": 23,
+        "name": "Fill simple form and capture warning message",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 694472399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 24,
+            "name": "I am on a form page",
+            "match": {
+              "location": "tests\\step-definitions\\simpleForm.steps.ts:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3867583400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 25,
+            "name": "I submit the form with invalid or incomplete data",
+            "match": {
+              "location": "tests\\step-definitions\\simpleForm.steps.ts:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 135136800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 26,
+            "name": "I should see a warning message",
+            "match": {
+              "location": "tests\\step-definitions\\simpleForm.steps.ts:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 57195399
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 524894599
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "identify-new-bikes-on-zigwheels;extract-menu-items-from-frames",
+        "keyword": "Scenario",
+        "line": 28,
+        "name": "Extract menu items from frames",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 492745699
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 29,
+            "name": "I am on a page with menu items inside frames",
+            "match": {
+              "location": "tests\\step-definitions\\menuFrames.steps.ts:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2206434200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 30,
+            "name": "I extract the menu items",
+            "match": {
+              "location": "tests\\step-definitions\\menuFrames.steps.ts:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 30955000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 31,
+            "name": "I should store the menu items in a collection",
+            "match": {
+              "location": "tests\\step-definitions\\menuFrames.steps.ts:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4776500
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 495415000
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "identify-new-bikes-on-zigwheels;capture-performance-metrics",
+        "keyword": "Scenario",
+        "line": 33,
+        "name": "Capture performance metrics",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 587907999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 34,
+            "name": "I am running automated tests",
+            "match": {
+              "location": "tests\\step-definitions\\performanceMetrics.steps.ts:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1195200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 35,
+            "name": "I measure response time, throughput, and error rate",
+            "match": {
+              "location": "tests\\step-definitions\\performanceMetrics.steps.ts:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1376272500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 36,
+            "name": "I should capture and report these performance metrics",
+            "match": {
+              "location": "tests\\step-definitions\\performanceMetrics.steps.ts:15"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1380700
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 899699900
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "identify-new-bikes-on-zigwheels;accessibility-testing",
+        "keyword": "Scenario",
+        "line": 38,
+        "name": "Accessibility testing",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 514721600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 39,
+            "name": "I am on any page of the site",
+            "match": {
+              "location": "tests\\step-definitions\\accessibility.steps.ts:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6184138800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 40,
+            "name": "I perform accessibility checks",
+            "match": {
+              "location": "tests\\step-definitions\\accessibility.steps.ts:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3522850000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 41,
+            "name": "the site should be compatible with screen readers and keyboard navigation",
+            "match": {
+              "location": "tests\\step-definitions\\accessibility.steps.ts:24"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 4919900,
+              "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m8\u001b[39m\n    at Proxy.<anonymous> (C:\\Users\\HP\\Documents\\zigwheels-automation\\node_modules\\playwright\\lib\\matchers\\expect.js:221:24)\n    at CustomWorld.<anonymous> (C:\\Users\\HP\\Documents\\zigwheels-automation\\tests\\step-definitions\\accessibility.steps.ts:34:31)"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 455197199
             }
           }
         ],
