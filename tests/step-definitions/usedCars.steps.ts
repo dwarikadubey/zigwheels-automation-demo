@@ -6,7 +6,8 @@ let popularModels: string[] = [];
 
 Given('I am on the ZigWheels used cars page for Chennai', async function () {
     usedCarsPage = new UsedCarsPage(this.page);
-    await usedCarsPage.gotoChennaiUsedCars();
+    const newPage = await usedCarsPage.gotoChennaiUsedCars();
+    usedCarsPage = new UsedCarsPage(newPage);
 });
 
 When('I view the list of popular used car models', async function () {

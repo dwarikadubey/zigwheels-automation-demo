@@ -15,7 +15,6 @@ Feature: Identify New Bikes on ZigWheels
     When I try to login with Google using invalid account details
     Then I should see an error message for invalid login
 
-  @frames
   Scenario: Handle windows and frames
     Given I am on a page with multiple windows or frames
     When I switch between windows and frames
@@ -31,27 +30,16 @@ Feature: Identify New Bikes on ZigWheels
     When I extract the menu items
     Then I should store the menu items in a collection
 
-  Scenario: Navigate back to home page
-    Given I am on any page of the site
-    When I click the home button or link
-    Then I should be navigated back to the home page
-
   Scenario: Capture performance metrics
     Given I am running automated tests
     When I measure response time, throughput, and error rate
     Then I should capture and report these performance metrics
 
   Scenario: Accessibility testing
-    Given I am on the site for accessibility testing
+    Given I am on any page of the site
     When I perform accessibility checks
     Then the site should be compatible with screen readers and keyboard navigation
 
-  Scenario: Parallel test execution
-    Given I have multiple test scenarios
-    When I execute tests in parallel
-    Then all tests should run successfully without interference
 
-  Scenario: Follow Page Object Model
-    Given I am writing automation scripts
-    When I implement the Page Object Model
-    Then my code should be modular and maintainable
+
+

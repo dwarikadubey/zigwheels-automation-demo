@@ -6,7 +6,9 @@ export default defineConfig({
     expect: {
         timeout: 5000
     },
-    reporter: 'html',
+    reporter: [
+        ['html', { outputFolder: 'playwright-report', open: 'never' }]
+    ],
     use: {
         headless: false,
         launchOptions: {

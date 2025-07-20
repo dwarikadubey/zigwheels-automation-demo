@@ -7,8 +7,24 @@ export class UsedCarsPage {
         this.page = page;
     }
 
-    async gotoChennaiUsedCars() {
-        await this.page.goto('https://www.zigwheels.com/used-car/Chennai', { timeout: 60000 });
+    async gotoChennaiUsedCars(): Promise<Page> {
+        await this.page.goto('https://www.zigwheels.com', { timeout: 60000 });
+        // Hover on 'More' menu using the span with class 'icon-down-arrow' and text 'MORE'
+        const moreMenuSelector = 'span.c-p.icon-down-arrow:has-text("MORE")';
+        await this.page.hover(moreMenuSelector);
+        // Wait for menu animation
+        await this.page.waitForTimeout(500);
+        // Wait for Used Cars option to appear
+        const usedCarsSelector = 'a[title="Used Cars"]';
+        await this.page.waitForSelector(usedCarsSelector, { state: 'visible', timeout: 5000 });
+        // Listen for new page (tab) opening
+        const [newPage] = await Promise.all([
+            this.page.context().waitForEvent('page'),
+            this.page.click(usedCarsSelector, { button: 'middle' }) // open in new tab
+        ]);
+        await newPage.bringToFront();
+        await newPage.waitForLoadState('domcontentloaded');
+        return newPage;
     }
 
     async getPopularModels() {
