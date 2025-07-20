@@ -4,56 +4,56 @@
     "elements": [
       {
         "description": "",
-        "id": "identify-new-bikes-on-zigwheels;extract-used-car-models-in-chennai",
+        "id": "identify-new-bikes-on-zigwheels;capture-error-message-on-invalid-google-login",
         "keyword": "Scenario",
-        "line": 8,
-        "name": "Extract used car models in Chennai",
+        "line": 13,
+        "name": "Capture error message on invalid Google login",
         "steps": [
           {
             "keyword": "Before",
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 966766000
+              "duration": 961936699
             }
           },
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 9,
-            "name": "I am on the ZigWheels used cars page for Chennai",
+            "line": 14,
+            "name": "I am on the ZigWheels login page",
             "match": {
-              "location": "tests\\step-definitions\\usedCars.steps.ts:7"
+              "location": "tests\\step-definitions\\login.steps.ts:7"
             },
             "result": {
               "status": "passed",
-              "duration": 10582581200
+              "duration": 889233900
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 10,
-            "name": "I view the list of popular used car models",
+            "line": 15,
+            "name": "I try to login with Google using invalid account details",
             "match": {
-              "location": "tests\\step-definitions\\usedCars.steps.ts:13"
+              "location": "tests\\step-definitions\\login.steps.ts:12"
             },
             "result": {
               "status": "passed",
-              "duration": 2558998700
+              "duration": 14120407200
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 11,
-            "name": "I should see all popular models displayed in a list",
+            "line": 16,
+            "name": "I should see an error message for invalid login",
             "match": {
-              "location": "tests\\step-definitions\\usedCars.steps.ts:17"
+              "location": "tests\\step-definitions\\login.steps.ts:16"
             },
             "result": {
               "status": "passed",
-              "duration": 10504399
+              "duration": 20047589100
             }
           },
           {
@@ -61,7 +61,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 893769499
+              "duration": 734989200
             }
           }
         ],

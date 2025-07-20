@@ -15,25 +15,38 @@ export class LoginPage {
         await this.page.locator('#des_lIcon').click();
 
         await this.page.waitForTimeout(6000);
-        await this.page.locator('div.lgn-sc.googleSignIn').click();
-        await this.page.waitForTimeout(2000);
         let popup;
         try {
-            popup = await this.page.waitForEvent('popup', { timeout: 15000 });
+            [popup] = await Promise.all([
+                this.page.waitForEvent('popup', { timeout: 15000 }),
+                this.page.locator('div.lgn-sc.googleSignIn').click()
+            ]);
             console.log('Popup window detected');
         } catch (e) {
             console.log('No popup window detected:', e);
         }
 
         if (popup) {
-            await popup.waitForLoadState('domcontentloaded');
+            await popup.waitForSelector('#identifierId', { state: 'visible', timeout: 10000 });
             console.log('Popup URL:', popup.url());
             const email_input = popup.locator('#identifierId');
-            await email_input.waitFor({ state: 'visible', timeout: 10000 });
-            await email_input.focus();
-            await email_input.fill('12##$$%%');
-            await popup.waitForTimeout(500);
-            await popup.locator('span.VfPpkd-vQzf8d:has-text("Next")').click();
+
+            const invalidEmails = ['invalid1@email', 'invalid2@email', 'invalid3@email'];
+            for (const email of invalidEmails) {
+                await email_input.fill(email);
+                await popup.waitForTimeout(500);
+                await popup.locator('#identifierNext > div > button > span').click();
+                // Wait for error message or input to be ready again
+                const errorSelector = 'div.Ekjuhf.Jj6Lae';
+                try {
+                    await popup.waitForSelector(errorSelector, { state: 'visible', timeout: 5000 });
+                    const errorMsg = await popup.locator(errorSelector).textContent();
+                    console.log(`Login error message for '${email}': ${errorMsg?.trim()}`);
+                } catch (e) {
+                    console.log(`No error message found for '${email}'.`);
+                }
+                await popup.waitForTimeout(500);
+            }
         } else {
             console.log('Google login popup did not appear.');
         }
