@@ -57,7 +57,7 @@ export class UpcomingBikesPage {
         ]);
 
         // Scroll until the bike cards list is visible
-        const bikeCards = this.page.locator('ul#modelList li');
+        const bikeCards = this.page.locator('ul#modelList li.modelItem');
         let cardsVisible = false;
         let cardScrollAttempts = 0;
         while (!cardsVisible && cardScrollAttempts < 15) {
